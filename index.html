@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interactive Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+
+    <!-- Main card container -->
+    <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-sm text-center">
+        <!-- Message to be changed -->
+        <h1 id="message" class="text-3xl font-bold text-gray-800 mb-6 transition-all duration-300">
+            Hello, World!
+        </h1>
+        
+        <!-- Button to trigger the action -->
+        <button onclick="changeMessage()" 
+                class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-full shadow-lg 
+                       hover:bg-blue-700 transition-transform duration-200 active:scale-95 
+                       focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+            Click Me
+        </button>
+    </div>
+
+    <!-- JavaScript code to handle the interaction -->
+    <script>
+        function changeMessage() {
+            // Get the element with the id "message"
+            const messageElement = document.getElementById('message');
+            
+            // Change its text content
+            messageElement.textContent = "Welcome to your first web app!";
+        }
+    </script>
+
+</body>
+</html>
+
+
